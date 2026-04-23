@@ -1,7 +1,12 @@
 name: 美团去广告
 desc: 美团外卖去广告（自用）
 author: ChatGPT
-version: 1.0.1
+version: 1.0.2
+
+script-providers:
+  mt_clean:
+    url: https://raw.githubusercontent.com/hRa1n/stash-rulse/main/mt_clean.js
+    interval: 86400
 
 http:
   mitm:
@@ -24,8 +29,6 @@ http:
       name: mt_clean
       type: response
       require-body: true
-      timeout: 10
-      script: https://cdn.jsdelivr.net/gh/hRa1n/stash-rulse@main/mt_clean.js
 
 rules:
   - DOMAIN-SUFFIX,ad.meituan.com,REJECT
