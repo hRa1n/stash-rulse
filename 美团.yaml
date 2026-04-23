@@ -1,7 +1,7 @@
 name: 美团去广告
 desc: 美团外卖去广告（自用）
 author: ChatGPT
-version: 1.0.0
+version: 1.0.1
 
 http:
   mitm:
@@ -10,20 +10,13 @@ http:
     - '*.dianping.com'
 
   url-rewrite:
-    # 开屏广告
     - ^https?:\/\/.*meituan.*\/launch.* - reject
     - ^https?:\/\/.*meituan.*\/startup.* - reject
-
-    # 广告接口
     - ^https?:\/\/.*meituan.*\/advert.* - reject
     - ^https?:\/\/.*meituan.*\/ad\/.* - reject
     - ^https?:\/\/.*meituan.*\/promotion\/.* - reject
-
-    # 弹窗/活动
     - ^https?:\/\/.*meituan.*\/popup.* - reject
     - ^https?:\/\/.*meituan.*\/activity\/.* - reject
-
-    # 闪屏/欢迎页
     - ^https?:\/\/.*meituan.*\/splash.* - reject
 
   script:
@@ -32,25 +25,7 @@ http:
       type: response
       require-body: true
       timeout: 10
-      script: |
-        function clean(o) {
-          if (o && typeof o === 'object') {
-            for (let k in o) {
-              if (k.toLowerCase().includes('ad') || k.includes('广告')) {
-                delete o[k];
-              } else {
-                clean(o[k]);
-              }
-            }
-          }
-        }
-        try {
-          let obj = JSON.parse($response.body);
-          clean(obj);
-          $done({ body: JSON.stringify(obj) });
-        } catch (e) {
-          $done({});
-        }
+      script: https://cdn.jsdelivr.net/gh/hRa1n/stash-rulse@main/mt_clean.js
 
 rules:
   - DOMAIN-SUFFIX,ad.meituan.com,REJECT
