@@ -2,7 +2,7 @@
 # AUTHOR: blackmatrix7 + converted
 # VERSION: 1.0
 # UPDATED: 2026-04-24
-# DESC: 美团域名拦截（rewrite版）
+# DESC: 自用 美团域名拦截（rewrite版）
 
 rewrite:
   - match: ^https?:\/\/([^\/]+\.)?dianping\.com
