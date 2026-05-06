@@ -1,0 +1,9 @@
+name: DingTalk Direct Compatible
+desc: 仅追加钉钉直连规则，兼容其他覆写
+
+rules:
+  - DOMAIN-SUFFIX,dingtalk.com,DIRECT
+  - DOMAIN-SUFFIX,dingtalkapps.com,DIRECT
+  - DOMAIN-SUFFIX,dingtalkcdn.com,DIRECT
+  - DOMAIN-SUFFIX,alicdn.com,DIRECT
+  - DOMAIN-SUFFIX,aliyuncs.com,DIRECT
