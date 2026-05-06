@@ -4,30 +4,22 @@ icon: https://img.alicdn.com/imgextra/i2/O1CN012v3vuo1o5kHiSQMSp_!!6000000005174
 category: 直连
 
 rules:
-  # 钉钉快捷入口
+  # 浙江大学全部域名
+  - DOMAIN-SUFFIX,zju.edu.cn,DIRECT
+
+  # 钉钉相关全部域名
   - DOMAIN-SUFFIX,dingtalk.com,DIRECT
   - DOMAIN-SUFFIX,dingding.com,DIRECT
+  - DOMAIN-SUFFIX,dingtalkapps.com,DIRECT
+  - DOMAIN-SUFFIX,dingtalkcontent.com,DIRECT
+  - DOMAIN-SUFFIX,dingtalkcdn.com,DIRECT
+  - DOMAIN-SUFFIX,dingtalk.net,DIRECT
 
-  # 浙大校园卡/一卡通
-  - DOMAIN,yqfkgl.zju.edu.cn,DIRECT
-  - DOMAIN-SUFFIX,zju.edu.cn,DIRECT
-  - DOMAIN-SUFFIX,zju.edu,DIRECT
-
-  # 浙大相关域名
-  - DOMAIN-SUFFIX,zjuhz.com,DIRECT
-  - DOMAIN-SUFFIX,zjuchina.com,DIRECT
-  - DOMAIN-SUFFIX,zju.org,DIRECT
-
-  # 浙大/教育网常见 IP
+  # 浙大常见 IP 段
   - IP-CIDR,210.32.0.0/16,DIRECT,no-resolve
   - IP-CIDR,222.205.0.0/16,DIRECT,no-resolve
 
-  # 内网/局域网
+  # 校园网/内网
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
-
-  # IPv6 内网
-  - IP-CIDR6,::1/128,DIRECT,no-resolve
-  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
-  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
