@@ -1,4 +1,6 @@
 name: 钉钉直连
+desc:确保了钉钉可以直连
+icon:
 category:直连
 
 rules:
