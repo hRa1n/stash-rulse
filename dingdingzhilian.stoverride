@@ -1,7 +1,7 @@
 name: 校园卡直连
 desc: 校园网 Wi-Fi 下，保留校园卡和内网服务直连
 category: 直连
-icon: https://www.zju.edu.cn/_upload/tpl/05/44/1348/template1348/images/favicon.ico
+icon: 
 
 rules:
   # 浙大相关域名
