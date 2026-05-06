@@ -1,11 +1,25 @@
-name: 钉钉直连
-desc: 仅追加钉钉直连规则，兼容其他覆写
+name: 浙大校园卡直连
+desc: 校园网 Wi-Fi 下，保留浙大校园卡和内网服务直连
 category: 直连
-icon: https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/f2/2d/6f/f22d6fe2-5f6c-2fb6-9e6a-2d0c6f2d7c60/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg
+icon: https://www.zju.edu.cn/_upload/tpl/05/44/1348/template1348/images/favicon.ico
 
 rules:
+  # 浙大相关域名
+  - DOMAIN-SUFFIX,zju.edu.cn,DIRECT
+  - DOMAIN-KEYWORD,zju,DIRECT
+
+  # 钉钉相关域名
   - DOMAIN-SUFFIX,dingtalk.com,DIRECT
   - DOMAIN-SUFFIX,dingtalkapps.com,DIRECT
   - DOMAIN-SUFFIX,dingtalkcdn.com,DIRECT
   - DOMAIN-SUFFIX,alicdn.com,DIRECT
   - DOMAIN-SUFFIX,aliyuncs.com,DIRECT
+
+  # 校园网/局域网/内网地址直连
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - IP-CIDR,169.254.0.0/16,DIRECT,no-resolve
+  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
