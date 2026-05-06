@@ -1,14 +1,31 @@
+name: 钉钉直连
+category:直连
+
 rules:
-  # 浙大主域名后缀直连
+  # 钉钉快捷入口
+  - DOMAIN-SUFFIX,dingtalk.com,DIRECT
+  - DOMAIN-SUFFIX,dingding.com,DIRECT
+
+  # 浙大校园卡/一卡通
+  - DOMAIN,yqfkgl.zju.edu.cn,DIRECT
   - DOMAIN-SUFFIX,zju.edu.cn,DIRECT
-  - DOMAIN-SUFFIX,zju.org,DIRECT
+  - DOMAIN-SUFFIX,zju.edu,DIRECT
+
+  # 浙大相关域名
+  - DOMAIN-SUFFIX,zjuhz.com,DIRECT
   - DOMAIN-SUFFIX,zjuchina.com,DIRECT
-  
-  # 校园网内网常用 IP 段（防止被代理劫持）
+  - DOMAIN-SUFFIX,zju.org,DIRECT
+
+  # 浙大/教育网常见 IP
+  - IP-CIDR,210.32.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,222.205.0.0/16,DIRECT,no-resolve
+
+  # 内网/局域网
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
-  
-  # 针对 RVPN/WebVPN 常用网段
-  - IP-CIDR,222.205.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,210.32.0.0/16,DIRECT,no-resolve
+
+  # IPv6 内网
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
