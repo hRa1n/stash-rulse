@@ -4,22 +4,5 @@ icon: https://img.alicdn.com/imgextra/i2/O1CN012v3vuo1o5kHiSQMSp_!!6000000005174
 category: 直连
 
 rules:
-  # 浙江大学全部域名
   - DOMAIN-SUFFIX,zju.edu.cn,DIRECT
-
-  # 钉钉相关全部域名
   - DOMAIN-SUFFIX,dingtalk.com,DIRECT
-  - DOMAIN-SUFFIX,dingding.com,DIRECT
-  - DOMAIN-SUFFIX,dingtalkapps.com,DIRECT
-  - DOMAIN-SUFFIX,dingtalkcontent.com,DIRECT
-  - DOMAIN-SUFFIX,dingtalkcdn.com,DIRECT
-  - DOMAIN-SUFFIX,dingtalk.net,DIRECT
-
-  # 浙大常见 IP 段
-  - IP-CIDR,210.32.0.0/16,DIRECT,no-resolve
-  - IP-CIDR,222.205.0.0/16,DIRECT,no-resolve
-
-  # 校园网/内网
-  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
-  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
-  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
