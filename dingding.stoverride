@@ -1,7 +1,7 @@
 name: 钉钉直连
-desc:确保了钉钉可以直连
-icon:https://img.alicdn.com/imgextra/i2/O1CN012v3vuo1o5kHiSQMSp_!!6000000005174-2-tps-1024-1024.png
-category:直连
+desc: 确保了钉钉可以直连
+icon: https://img.alicdn.com/imgextra/i2/O1CN012v3vuo1o5kHiSQMSp_!!6000000005174-2-tps-1024-1024.png
+category: 直连
 
 rules:
   # 钉钉快捷入口
