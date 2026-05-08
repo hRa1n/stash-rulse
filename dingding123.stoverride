@@ -3,6 +3,11 @@ desc: 确保了钉钉可以直连
 icon: https://img.alicdn.com/imgextra/i2/O1CN012v3vuo1o5kHiSQMSp_!!6000000005174-2-tps-1024-1024.png
 category: 直连
 
+dns:
+  nameserver-policy:
+    "+.zju.edu.cn": system
+    "+.dingtalk.com": system
+
 rules:
   - DOMAIN-SUFFIX,zju.edu.cn,DIRECT
   - DOMAIN-SUFFIX,dingtalk.com,DIRECT
