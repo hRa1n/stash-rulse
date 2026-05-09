@@ -1,0 +1,16 @@
+name: blackmatrix7 广告过滤
+desc: 使用 ios_rule_script Advertising 规则集过滤广告域名
+icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png
+category: 去广告
+
+rule-providers:
+  blackmatrix7_ad:
+    type: http
+    behavior: classical
+    format: yaml
+    interval: 86400
+    path: ./ruleset/blackmatrix7_ad.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Advertising/Advertising.yaml
+
+rules:
+  - RULE-SET,blackmatrix7_ad,REJECT
