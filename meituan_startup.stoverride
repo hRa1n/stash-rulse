@@ -1,0 +1,21 @@
+name: 美团外卖开屏去广告
+desc: 使用 blackmatrix7 startup.js 去除美团外卖开屏广告
+category: 去广告
+
+http:
+  script:
+    # 美团外卖_开屏去广告
+    - match: ^https?:\/\/wmapi\.meituan\.com\/api\/v\d+\/loadInfo?
+      name: startup.js
+      type: response
+      require-body: true
+      timeout: 30
+      argument: ''
+
+mitm:
+  - "wmapi.meituan.com"
+
+script-providers:
+  startup.js:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
+    interval: 86400
